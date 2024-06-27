@@ -147,6 +147,8 @@ include::../product/atip-lifecycle.adoc[]
 
 = Appendix
 
+= Release Notes
+
 //--------------------------------------------
 // Release Notes
 //--------------------------------------------
