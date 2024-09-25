@@ -322,7 +322,7 @@ Let us download the latest stable version of the `virtctl` tool:
 
 [,shell]
 ----
-$ export VERSION=v1.1.0
+$ export VERSION=v1.3.1
 $ wget https://github.com/kubevirt/kubevirt/releases/download/${VERSION}/virtctl-${VERSION}-linux-amd64
 ----
 
