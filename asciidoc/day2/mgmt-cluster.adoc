@@ -12,187 +12,46 @@ ifdef::env-github[]
 endif::[]
 :toc: preamble
 
-This section covers how to do various `Day 2` operations on a `management cluster`.
+This section covers how to perform the various `Day 2` operations related to upgrading your `management` cluster from one Edge platform version to another.
 
-== RKE2 upgrade
+The `Day 2` operations are automated by the <<components-upgrade-controller, Upgrade Controller>> and include:
 
-[NOTE]
-====
-To ensure *disaster recovery*, we advise to do a backup of the RKE2 cluster data. For information on how to do this, check link:https://docs.rke2.io/backup_restore[here]. The default location for the `rke2` binary is `/opt/rke2/bin`.
-====
+* <<components-slmicro, SL Micro>> OS upgrade
 
-You can upgrade the RKE2 version using the RKE2 installation script as follows:
+* <<components-rke2, RKE2>>/<<components-k3s, K3s>> upgrade
 
-[source,bash]
-----
-curl -sfL https://get.rke2.io | INSTALL_RKE2_VERSION=vX.Y.Z+rke2rN sh -
-----
+* SUSE additional components (Rancher, Neuvector, etc.) upgrade
 
-Remember to restart the `rke2` process after installing:
+== Prerequisites
 
-[source,bash]
-----
-# For server nodes:
-systemctl restart rke2-server
+Before upgrading your `management` cluster, the following prerequisites must be met:
 
-# For agent nodes:
-systemctl restart rke2-agent
-----
+. `SCC registered nodes` - ensure your cluster nodes' OS are registered with a subscription key that supports the OS version specified in the Edge <<release-notes,release>> you intend to upgrade to.
 
-[IMPORTANT]
-====
-To avoid any unforseen upgrade problems, use the following node upgrade order:
+. `Upgrade Controller` - make sure that the `Upgrade Controller` has been deployed on your `management` cluster. For installation steps, refer to <<components-upgrade-controller-installation, Installing the Upgrade Controller>>.
 
-. _Server nodes_ - should be upgraded *one* node at a time.
-. _Agent nodes_  - should be upgraded after *all* server node upgrades have finished. Can be upgraded in parallel.
-====
+== Upgrade
 
-_For further information, see the link:https://docs.rke2.io/upgrade/manual_upgrade#upgrade-rke2-using-the-installation-script[RKE2 upgrade documentation]._
+. Determine the Edge <<release-notes,release>> version that you wish to upgrade your `management` cluster to.
 
-== OS upgrade
-
-NOTE: This section assumes that you have registered your system to https://scc.suse.com.
-
-SUSE regularly releases new `SLE Micro` package updates. To retrieve the updated package versions SLE Micro uses `transactional-upgrade`.
-
-`transactional-upgrade` provides an application and library to update a Linux operating system in a transactional way, i.e. the update will be performed in the background while the system continues running as it is. Only after you *reboot* the system will the update take effect. For further information, see the `transactional-update` https://github.com/openSUSE/transactional-update[GitHub] GitHub page.
-
-.To update all packages in the system, execute:
-[source,bash]
-----
-transactional-update
-----
-
-Since *rebooting* the node will result in it being unavailable for some time, if you are running a multi-node cluster, you can https://kubernetes.io/docs/reference/kubectl/generated/kubectl_cordon/[cordon] and https://kubernetes.io/docs/reference/kubectl/generated/kubectl_drain/[drain] the node before the *reboot*.
-
-.To cordon a node, execute:
-[source,bash]
-----
-kubectl cordon <node>
-----
-
-This will result in the node being taken out of the default scheduling mechanism, ensuring that no pods will be assigned to it by mistake.
-
-.To drain a node, execute:
-[source, bash]
-----
-kubectl drain <node>
-----
-
-This will ensure that all workloads on the node will be transferred to other available nodes.
-
-[NOTE]
-====
-Depending on what workloads you are running on the node, you might also need to provide additional flags (e.g. `--delete-emptydir-data`, `--ignore-daemonsets`) to the command.
-====
-
-.Reboot node:
-[source,bash]
-----
-sudo reboot
-----
-
-After a successful reboot, the packages on your node will be updated. The only thing left is to bring the node back to the default scheduling mechanism with the https://kubernetes.io/docs/reference/kubectl/generated/kubectl_uncordon/[uncordon] command.
-
-.Uncordon node:
-[source,bash]
-----
-kubectl uncordon <node>
-----
-
-[NOTE]
-====
-In case you want to revert the update, use the above steps with the following `transactional-update` command:
-
-[source,bash]
-----
-transactional-update rollback last
-----
-====
-
-== Helm upgrade
-
-[NOTE]
-====
-This section assumes you have installed `helm` on your system. For `helm` installation instructions, check link:https://helm.sh/docs/intro/install[here].
-====
-
-This section covers how to upgrade both an <<day2-mgmt-cluster-eib-helm-chart-upgrade,EIB>> and <<day2-mgmt-cluster-helm-chart-upgrade,non-EIB>> deployed helm chart.
-
-[#day2-mgmt-cluster-eib-helm-chart-upgrade]
-=== EIB deployed helm chart
-
-EIB deploys helm charts defined in it's <<quickstart-eib-definition-file, image definition file>> by using RKE2's manifest https://docs.rke2.io/advanced#auto-deploying-manifests[auto-deploy] functionality. 
-
-In order to upgrade a chart that is deployed in such a manner, you need to upgrade the chart manifest file that EIB will create under the `/var/lib/rancher/rke2/server/manifests` directory on your `initializer` node.
-
-[NOTE]
-====
-To ensure disaster recovery, we advise that you always backup your chart manifest file as well as follow any documentation related to disaster recovery that your chart offers.
-====
-
-To upgrade the chart manifest file, follow these steps:
-
-. Locate the `initializer` node
-
-** For `multi-node clusters` - in your EIB image definition file, you should have specified the `initializer: true` property for one of your nodes. If you have not specified this property, the initializer node will be the first *server* node in your node list.
-
-** For `single-node clusters` - the initializer is the currently running node.
-
-. SSH to the `initializer` node:
+. In the `management` cluster, deploy an `UpgradePlan` that specifies the desired `release version`. The `UpgradePlan` must be deployed in the namespace of the `Upgrade Controller`.
 +
-[source,bash]
+[,bash]
 ----
-ssh root@<node_ip>
-----
-
-. link:https://helm.sh/docs/helm/helm_pull/[Pull] the helm chart: 
-
-** For helm charts hosted in a helm chart repository:
-+
-[source,bash]
-----
-helm repo add <chart_repo_name> <chart_repo_urls>
-helm pull <chart_repo_name>/<chart_name>
-
-# Alternatively if you want to pull a specific verison
-helm pull <chart_repo_name>/<chart_name> --version=X.Y.Z
-----
-
-** For OCI-based helm charts:
-+
-[source,bash]
-----
-helm pull oci://<chart_oci_url>
-
-# Alternatively if you want to pull a specific verison
-helm pull oci://<chart_oci_url> --version=X.Y.Z
-----
-
-. Encode the pulled `.tgz` archive so that it can be passed to a `HelmChart` CR config:
-+
-[source,bash]
-----
-base64 -w 0 <chart_name>-X.Y.Z.tgz  > <chart_name>-X.Y.Z.txt
-----
-
-. Make a copy of the chart manifest file that we will edit:
-+
-[source, bash]
-----
-cp /var/lib/rancher/rke2/server/manifests/<chart_name>.yaml ./<chart_name>.yaml
-----
-
-. Change the `chartContent` and `version` configurations of the `bar.yaml` file:
-+
-[source,bash]
-----
-sed -i -e "s|chartContent:.*|chartContent: $(<chart-name-X.Y.Z.txt)|" -e "s|version:.*|version: X.Y.Z|" <chart_name>.yaml
+kubectl apply -n <upgrade_controller_namespace> -f - <<EOF
+apiVersion: lifecycle.suse.com/v1alpha1
+kind: UpgradePlan
+metadata:
+  name: upgrade-plan-mgmt-3-1-X
+spec:
+  # Version retrieved from release notes
+  releaseVersion: 3.1.X
+EOF
 ----
 +
 [NOTE]
 ====
-If you need to do any additional upgrade changes to the chart (e.g. adding *new* custom chart values), you need to manually edit the chart manifest file.
+There may be use-cases where you would want to make additional configurations over the `UpgradePlan`. For all possible configurations, refer to the <<components-upgrade-controller-extensions-upgrade-plan, UpgradePlan>> section.
 ====
 
 . Replace the original chart manifest file:
@@ -267,7 +126,9 @@ sed -i -e "s|chartContent:.*|chartContent: $(<rancher-2.8.8-encoded.txt)|" -e "s
 +
 [NOTE]
 ====
-If you need to do any additional upgrade changes to the chart (e.g. adding *new* custom chart values), you need to manually edit the `rancher.yaml` file.
+For more information on the actual `upgrade process`, refer to <<components-upgrade-controller-how, How does the Upgrade Controller work?>>.
+
+For information on how to track the `upgrade process`, refer to <<components-upgrade-controller-how-track, Tracking the upgrade process>>.
 ====
 
 . Replace the original `rancher.yaml` file:
