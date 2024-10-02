@@ -163,19 +163,19 @@ kubernetes:
     charts:
       - name: cert-manager
         repositoryName: jetstack
-        version: 1.14.2
+        version: 1.15.3
         targetNamespace: cert-manager
         valuesFile: certmanager.yaml
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn-crd
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
@@ -194,14 +194,14 @@ kubernetes:
         createNamespace: true
         installationNamespace: kube-system
       - name: neuvector-crd
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
         installationNamespace: kube-system
         valuesFile: neuvector.yaml
       - name: neuvector
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
@@ -292,19 +292,19 @@ kubernetes:
     charts:
       - name: cert-manager
         repositoryName: jetstack
-        version: 1.14.2
+        version: 1.15.3
         targetNamespace: cert-manager
         valuesFile: certmanager.yaml
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn-crd
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
@@ -323,14 +323,14 @@ kubernetes:
         createNamespace: true
         installationNamespace: kube-system
       - name: neuvector-crd
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
         installationNamespace: kube-system
         valuesFile: neuvector.yaml
       - name: neuvector
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
@@ -1003,19 +1003,19 @@ kubernetes:
     charts:
       - name: cert-manager
         repositoryName: jetstack
-        version: 1.14.2
+        version: 1.15.3
         targetNamespace: cert-manager
         valuesFile: certmanager.yaml
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn-crd
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
         installationNamespace: kube-system
       - name: longhorn
-        version: 103.3.0+up1.6.1
+        version: 104.2.0+up1.7.1
         repositoryName: rancher-charts
         targetNamespace: longhorn-system
         createNamespace: true
@@ -1041,14 +1041,14 @@ kubernetes:
         createNamespace: true
         installationNamespace: kube-system
       - name: neuvector-crd
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
         installationNamespace: kube-system
         valuesFile: neuvector.yaml
       - name: neuvector
-        version: 103.0.3+up2.7.6
+        version: 104.0.1+up2.7.9
         repositoryName: rancher-charts
         targetNamespace: neuvector
         createNamespace: true
