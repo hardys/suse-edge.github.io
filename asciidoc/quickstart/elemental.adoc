@@ -379,22 +379,6 @@ You may need to scroll down to see more options.
 
 After creating these objects, you should see a new Kubernetes cluster spin up using the new node you just installed with.
 
-[TIP]
-====
-To allow for easier grouping of systems, you could add a startup script that finds something in the environment that is known to be unique to that location.
-
-For example, if you know that each location will have a unique subnet, you can write a script that finds the network prefix and adds a label to the corresponding MachineInventory.
-
-This would typically be custom to your system's design but could look like:
-
-[,bash]
-----
-INET=`ip addr show dev eth0 | grep "inet\ "`
-elemental-register --label "network=$INET" \
- --label "network=$INET" /oem/registration
-----
-====
-
 == Node Reset (Optional)
 
 SUSE Rancher Elemental supports the ability to perform a "node reset" which can optionally trigger when either a whole cluster is deleted from Rancher, a single node is deleted from a cluster, or a node is manually deleted from the machine inventory. This is useful when you want to reset and clean-up any orphaned resources and want to automatically bring the cleaned node back into the machine inventory so it can be reused. This is not enabled by default, and thus any system that is removed, will not be cleaned up (i.e. data will not be removed, and any Kubernetes cluster resources will continue to operate on the downstream clusters) and it will require manual intervention to wipe data and re-register the machine to Rancher via Elemental.
