@@ -166,7 +166,7 @@ Summary: SUSE Edge 3.1.0 is the first release in the SUSE Edge 3.1 release strea
 
 == Components Versions
 
-The following table describes the individual components that make up the 3.1 release, including the version, the Helm chart version (if applicable), and from where the released artifact can be pulled in the binary format. Please follow the associated documentation for usage and deployment examples. Note that items in bold are highlighted changes from the previous z-stream release.
+The following table describes the individual components that make up the 3.1 release, including the version, the Helm chart version (if applicable), and from where the released artifact can be pulled in the binary format. Please follow the associated documentation for usage and deployment examples.
 
 |======
 | Name | Version | Helm Chart Version | Artifact Location (URL/Image)
