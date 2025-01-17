@@ -1389,13 +1389,13 @@ Once the file has been created, it must be referenced, along with the name of th
 
 [source,]
 ----
-OPTIONS="-f /etc/ptp4l-G.8275.1.conf -i ${IFNAME} --message_tag ptp-8275.1"
+OPTIONS="-f /etc/ptp4l-G.8275.1.conf -i $IFNAME --message_tag ptp-8275.1"
 ----
 
 More precisely:
 
 - `-f` requires the file name of the configuration file to use; `/etc/ptp4l-G.8275.1.conf` in this case
-- `-i` requires the name of the interface to use, replace `${IFNAME}` with real interface name
+- `-i` requires the name of the interface to use, replace `$IFNAME` with real interface name
 - `--message_tag` allows to better identify the ptp4l output in the system logs and is optional
 
 Once the above steps are complete, the `ptp4l` daemon can be (re)started:
@@ -1448,7 +1448,7 @@ announceReceiptTimeout		2
 table_id                        1
 logQueryInterval                2
 UDPv4                           ${PEER_IP_ADDRESS}
-[${INTERFACE_NAME}]
+[$INTERFACE_NAME]
 unicast_master_table            1
 ----
 
@@ -1467,7 +1467,7 @@ OPTIONS="-f /etc/ptp4l-G.8275.2.conf --message_tag ptp-8275.2"
 More precisely:
 
 - `-f` requires the file name of the configuration file to use; `/etc/ptp4l-G.8275.2.conf` in this case
-- `-i` requires the name of the interface to use, replace `${IFNAME}` with real interface name
+- `-i` requires the name of the interface to use, replace `$IFNAME` with real interface name
 - `--message_tag` allows to better identify the ptp4l output in the system logs and is optional
 
 Once the above steps are complete, the `ptp4l` daemon can be (re)started:
@@ -1491,10 +1491,10 @@ Although not required, it is recommended that you fully complete the configurati
 
 [source,]
 ----
-OPTIONS="-s ${INTERFACE_NAME} -w"
+OPTIONS="-s $INTERFACE_NAME -w"
 ----
 
-Where `${INTERFACE_NAME}` is the name of the interface already set up in ptp4l that will be used as the source for the system clock. This is used, in practice, to identify the source PHC.
+Where `$INTERFACE_NAME` is the name of the interface already set up in ptp4l that will be used as the source for the system clock. This is used, in practice, to identify the source PHC.
 
 [#ptp-capi]
 ==== Cluster API integration
