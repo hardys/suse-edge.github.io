@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2025-07-09 12:09+0200\n"
-"PO-Revision-Date: 2024-12-20 17:53+0000\n"
-"Last-Translator: Valentina Leonardi <valentina.leonardi@vistatec.com>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/edge/release-31/"
-"ja/>\n"
+"PO-Revision-Date: 2025-07-24 13:08+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/edge/"
+"edge-release-3-1/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.1\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. type: Content of: outside any tag (error?)
 #: l10n/source/edge.xml:1
@@ -1451,12 +1451,17 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:145 l10n/source/edge.xml:305
+#, fuzzy
 msgid ""
 "The <literal>time</literal> section is optional but it is highly recommended "
 "to configure it to avoid potential issues with certificates and clock skew. "
 "The values provided in this example are for illustrative purposes only. "
 "Please adjust them to fit your specific requirements."
 msgstr ""
+"<literal>time</literal>セクションはオプションですが、証明書とクロックスキュー"
+"に関する潜在的な問題を避けるために、設定することを強くお勧めします。この例で"
+"指定されている値は説明のみを目的としています。ご自身の特定の要件に合わせて調"
+"整してください。"
 
 #. type: Content of: <book><part><chapter><section><section><section><title>
 #: l10n/source/edge.xml:146 l10n/source/edge.xml:2829 l10n/source/edge.xml:2868
@@ -1526,11 +1531,15 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><section><section><section><note><para>
 #: l10n/source/edge.xml:153
+#, fuzzy
 msgid ""
 "When deploying EIB images to downstream clusters, it is required also to "
 "include the sha256 sum of the image on the <literal>Metal3MachineTemplate</"
 "literal> object.  It can be generated as:"
 msgstr ""
+"EIBイメージをダウンストリームクラスタにデプロイする際は、<literal>Metal3Machi"
+"neTemplate</literal>オブジェクトにイメージのSHA256ハッシュ値を含める必要があ"
+"ります。  これは次のように生成できます："
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:154
@@ -2784,12 +2793,17 @@ msgstr "エンコードされていないパスワードは<literal>eib</literal
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:307
+#, fuzzy
 msgid ""
 "The <literal>sccRegistrationCode</literal> is needed to download and install "
 "the necessary RPMs from the official sources (alternatively, the "
 "<literal>elemental-register</literal> and <literal>elemental-system-agent</"
 "literal> RPMs can be manually side-loaded instead)"
 msgstr ""
+"<literal>sccRegistrationCode</literal>は、公式なソースから必要なRPMをダウンロ"
+"ードしてインストールするために必要です(または、代わりに<literal>elemental-"
+"register</literal>および<literal>elemental-system-"
+"agent</literal>のRPMを手動でサイドロードすることもできます)。"
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:309
@@ -3128,11 +3142,16 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><note><para>
 #: l10n/source/edge.xml:344
+#, fuzzy
 msgid ""
 "For multi-node scenarios, EIB automatically deploys MetalLB and Endpoint "
 "Copier Operator in order for hosts provisioned using the same built image to "
 "automatically join a Kubernetes cluster."
 msgstr ""
+"マルチノードシナリオの場合、"
+"同じ構築されたイメージを使用してプロビジョニングされたホストが "
+"Kubernetesクラスタに自動的に参加できるように、EIBははMetalLBとEndpoint "
+"Copier Operatorを自動的にデプロイします。"
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:345
@@ -3372,55 +3391,78 @@ msgstr "OSユーザの設定"
 
 #. type: Content of: <book><part><chapter><section><section><para>
 #: l10n/source/edge.xml:370
+#, fuzzy
 msgid ""
 "The <literal>time</literal> section is optional but it is highly recommended "
 "to be configured to avoid potential issues with certificates and clock skew. "
 "EIB will configure chronyd and <literal>/etc/localtime</literal> depending "
 "on the parameters here."
 msgstr ""
+"<literal>time</literal>セクションはオプションですが、証明書とクロックスキュー"
+"に関する潜在的な問題を避けるために、設定することを強くお勧めします。EIBは、ch"
+"ronydと<literal>/etc/"
+"localtime</literal>をここのパラメータに応じて設定します。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:371
+#, fuzzy
 msgid ""
 "The <literal>timezone</literal> specifies the timezone in the format of "
 "\"Region/Locality\" (e.g. \"Europe/London\"). The full list may be found by "
 "running <literal>timedatectl list-timezones</literal> on a Linux system."
 msgstr ""
+"<literal>timezone</literal>では、タイムゾーンを「地域/都市」(例: 「Europe/"
+"London」)の形式で指定します。完全なリストを確認するには、"
+"Linuxシステム上で<literal>timedatectl list-timezones</literal>を実行します。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:372
+#, fuzzy
 msgid "ntp - Defines attributes related to configuring NTP (using chronyd):"
-msgstr ""
+msgstr "ntp - NTPの設定(chronydを使用)に関連する属性を定義します。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:373
+#, fuzzy
 msgid ""
 "forceWait - Requests that chronyd attempts to synchronize timesources before "
 "starting other services, with a 180s timeout."
-msgstr ""
+msgstr "forceWait - "
+"他のサービスを開始する前にchronydが時刻ソースの同期を試行するよう要求します。"
+"タイムアウトは180秒です。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:374
+#, fuzzy
 msgid ""
 "pools - Specifies a list of pools that chronyd will use as data sources "
 "(using <literal>iburst</literal> to improve the time taken for initial "
 "synchronization)."
 msgstr ""
+"pools - "
+"chronydがデータソースとして使用するプールのリストを指定します(<literal>iburst"
+"</literal>を使用すると、最初の同期にかかる時間を短縮できます)。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:375
+#, fuzzy
 msgid ""
 "servers - Specifies a list of servers that chronyd will use as data sources "
 "(using <literal>iburst</literal> to improve the time taken for initial "
 "synchronization)."
 msgstr ""
+"servers - "
+"chronydがデータソースとして使用するサーバのリストを指定します(<literal>iburst"
+"</literal>を使用すると、最初の同期にかかる時間を短縮できます)。"
 
 #. type: Content of: <book><part><chapter><section><section><note><para>
 #: l10n/source/edge.xml:376
+#, fuzzy
 msgid ""
 "The values provided in this example are for illustrative purposes only. "
 "Please adjust them to fit your specific requirements."
-msgstr ""
+msgstr "この例で指定されている値は説明のみを目的としています。ご自身の特定の要件に合"
+"わせて調整してください。"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:377
@@ -11640,11 +11682,13 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><title>
 #: l10n/source/edge.xml:1349
+#, fuzzy
 msgid "Building Updated SUSE Linux Micro Images with Kiwi"
-msgstr ""
+msgstr "Kiwiを使用したSUSE Linux Microの更新イメージの構築"
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1350
+#, fuzzy
 msgid ""
 "This section explains how to generate updated SUSE Linux Micro images to be "
 "used with Edge Image Builder, with Cluster API (CAPI) + Metal<superscript>3</"
@@ -11655,9 +11699,18 @@ msgid ""
 "reinstall the operating system with a new image rather than upgrading the "
 "hosts in place."
 msgstr ""
+"このセクションでは、SUSE Linux Microの更新イメージを生成して、Edge Image "
+"BuilderまたはCluster API (CAPI) + "
+"Metal<superscript>3</superscript>で使用するか、あるいはディスクイメージをブロ"
+"ックデバイスに直接書き込む方法について説明します。このプロセスは、初期のシス"
+"テムブートイメージに最新のパッチを含める必要がある状況や(インストール後のパッ"
+"チ転送を最小化するため)、CAPIを使用するシナリオにおいて、ホストをインプレース"
+"でアップグレードするのではなく、新しいイメージを使用してオペレーティングシス"
+"テムを再インストールする場合に役立ちます。"
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1351
+#, fuzzy
 msgid ""
 "This process makes use of <link xl:href=\"https://osinside.github.io/kiwi/"
 "\">Kiwi</link> to run the image build. SUSE Edge ships with a containerized "
@@ -11666,13 +11719,24 @@ msgid ""
 "required. The profile defines the type of output image that is required, "
 "with the common ones listed below:"
 msgstr ""
+"このプロセスでは、<link xl:href=\"https://osinside.github.io/kiwi/\""
+">Kiwi</link>を利用してイメージの構築を実行します。SUSE "
+"Edgeには、組み込みのヘルパーユーティリティによって全体的なプロセスが簡素化さ"
+"れるコンテナ化バージョンが付属しており、必要なターゲット<emphasis role="
+"\"strong\""
+">プロファイル</emphasis>を指定できます。このプロファイルで、必要な出力イメー"
+"ジのタイプを定義します。以下に一般的なものを示します。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1352
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base</emphasis>\" - A SUSE Linux Micro disk "
 "image with a reduced package set (it includes podman)."
 msgstr ""
+"「<emphasis role=\"strong\">Base</emphasis>」 - "
+"縮小版のパッケージセットが含まれるSUSE Linux "
+"Microディスクイメージ(podmanを含む)。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1353
@@ -11689,25 +11753,35 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1354
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base-RT</emphasis>\" - Same as \"Base\" above "
 "but using a real-time (rt) kernel instead."
 msgstr ""
+"「<emphasis role=\"strong\">Base-RT</emphasis>」 - "
+"上の「Base」と同じですが、代わりにリアルタイム(rt)カーネルを使用します。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1355
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base-RT-SelfInstall</emphasis>\" - A SelfInstall "
 "image based on the \"Base-RT\" above"
 msgstr ""
+"「<emphasis role=\"strong\">Base-RT-SelfInstall</emphasis>」 - 上の「Base-"
+"RT」に基づくセルフインストールイメージ。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1356
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Default</emphasis>\" - A SUSE Linux Micro disk "
 "image based on the \"Base\" above but with a few more tools, including the "
 "virtualization stack, Cockpit and salt-minion."
 msgstr ""
+"「<emphasis role=\"strong\">Default</emphasis>」 - 上の「Base」に基づくSUSE "
+"Linux Microディスクイメージですが、仮想化スタック、Cockpit、salt-"
+"minionなどのツールがいくつか追加されています。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1357
@@ -11739,6 +11813,7 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1359
+#, fuzzy
 msgid ""
 "This process works for both AMD64/Intel 64 and AArch64 architectures, "
 "although not all image profiles are available for both architectures, e.g. "
@@ -11746,56 +11821,80 @@ msgid ""
 "time kernel (i.e. \"Base-RT\" or \"Base-RT-SelfInstall\") is not currently "
 "available for AArch64."
 msgstr ""
+"このプロセスはAMD64/Intel "
+"64およびAArch64のどちらのアーキテクチャでも動作しますが、両方のアーキテクチャ"
+"ですべてのイメージプロファイルが利用できるわけではありません。たとえば、SUSE "
+"Edge 3.1では、SUSE Linux Micro "
+"6.0が使用されており、リアルタイムカーネルが含まれるイメージ(つまり「Base-"
+"RT」または「Base-RT-SelfInstall」)は現在のところAArch64では利用できません。"
 
 #. type: Content of: <book><part><chapter><note><para>
 #: l10n/source/edge.xml:1360
+#, fuzzy
 msgid ""
 "It is required to use a build host with the same architecture of the images "
 "being built. In other words, to build an AArch64 image, it is required to "
 "use an AArch64 build host, and vice-versa for AMD64/Intel 64 - cross-builds "
 "are not supported at this time."
 msgstr ""
+"構築するイメージと同じアーキテクチャの構築ホストを使用する必要があります。つ"
+"まり、AArch64のイメージを構築するにはAArch64の構築ホストを使用する必要があり"
+"、AMD64/Intel "
+"64の場合も同様です。クロス構築は現在のところサポートされていません。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1362
+#, fuzzy
 msgid "Kiwi image builder requires the following:"
-msgstr ""
+msgstr "Kiwi Image Builderには以下が必要です。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1363
+#, fuzzy
 msgid ""
 "A SUSE Linux Micro 6.0 host (\"build system\") with the same architecture of "
 "the image being built."
-msgstr ""
+msgstr "構築するイメージと同じアーキテクチャのSUSE Linux Micro "
+"6.0ホスト(「構築システム」)。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1364
+#, fuzzy
 msgid ""
 "The build system needs to be already registered via <literal>SUSEConnect</"
 "literal> (the registration is used to pull the latest packages from the SUSE "
 "repositories)"
 msgstr ""
+"構築システムは<literal>SUSEConnect</literal>を介して登録済みである必要があり"
+"ます(この登録を使用してSUSEリポジトリから最新のパッケージをプルします)。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1365
+#, fuzzy
 msgid ""
 "An internet connection that can be used to pull the required packages. If "
 "connected via proxy, the build host needs to be pre-configured."
-msgstr ""
+msgstr "必要なパッケージをプルするために使用できるインターネット接続。プロキシ経由で"
+"接続している場合、構築ホストを再設定する必要があります。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1366
+#, fuzzy
 msgid ""
 "SELinux needs to be disabled on the build host (as SELinux labelling takes "
 "place in the container and it can conflict with the host policy)"
 msgstr ""
+"構築ホスト上でSELinuxを無効化する必要があります(コンテナ内でSELinuxのラベル付"
+"けが実行され、これがホストのポリシーと競合する可能性があるためです)。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1367
+#, fuzzy
 msgid ""
 "At least 10GB free disk space to accommodate the container image, the build "
 "root, and the resulting output image(s)"
-msgstr ""
+msgstr "コンテナイメージ、構築ホスト、および作成される出力イメージを格納するための10G"
+"B以上の空きディスク容量。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1368
@@ -11806,23 +11905,29 @@ msgstr "はじめに"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1369
+#, fuzzy
 msgid ""
 "Due to certain limitations, it is currently required to disable SELinux. "
 "Connect to the SUSE Linux Micro 6.0 image build host and ensure SELinux is "
 "disabled:"
 msgstr ""
+"特定の制限のため、現在はSELinuxを無効化する必要があります。SUSE Linux Micro "
+"6.0イメージ構築ホストに接続し、SELinuxを確実に無効化します。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1370
+#, fuzzy
 msgid ""
 "Create an output directory to be shared with the Kiwi build container to "
 "save the resulting images:"
-msgstr ""
+msgstr "作成されるイメージを保存するためにKiwi構築コンテナと共有する出力ディレクトリ"
+"を作成します。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1371
+#, fuzzy
 msgid "Pull the latest Kiwi builder image from the SUSE Registry:"
-msgstr ""
+msgstr "SUSEレジストリから最新のKiwi Builderイメージをプルします。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1372
@@ -11833,33 +11938,46 @@ msgstr "イメージの構築"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1373
+#, fuzzy
 msgid ""
 "This is the default behavior of the Kiwi image container if no arguments are "
 "provided during the container image run. The following command runs "
 "<literal>podman</literal> with two directories mapped to the container:"
 msgstr ""
+"コンテナイメージの実行時に引数が指定されていない場合、これがKiwiイメージコン"
+"テナのデフォルトの動作です。以下のコマンドは、次の2つのディレクトリをコンテナ"
+"にマップした状態で<literal>podman</literal> を実行します。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1374
+#, fuzzy
 msgid ""
 "The <literal>/etc/zypp/repos.d</literal> SUSE Linux Micro package repository "
 "directory from the underlying host."
 msgstr ""
+"基になるホストのSUSE Linux "
+"Microパッケージリポジトリディレクトリである<literal>/etc/zypp/"
+"repos.d</literal>。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1375
+#, fuzzy
 msgid "The output <literal>~/output</literal> directory created above."
-msgstr ""
+msgstr "上記で作成される出力の<literal>~/output</literal>ディレクトリ。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1376
+#, fuzzy
 msgid ""
 "The Kiwi image container requires to run the <literal>build-image</literal> "
 "helper script as:"
 msgstr ""
+"Kiwiイメージコンテナでは、<literal>build-"
+"image</literal>ヘルパースクリプトを次のように実行する必要があります。"
 
 #. type: Content of: <book><part><chapter><section><note><para>
 #: l10n/source/edge.xml:1377
+#, fuzzy
 msgid ""
 "It’s expected that if you’re running this script for the first time that it "
 "will <emphasis role=\"strong\">fail</emphasis> shortly after starting with "
@@ -11869,35 +11987,57 @@ msgid ""
 "inside of the container image. Simply re-run the command again and it should "
 "proceed without issue."
 msgstr ""
+"このスクリプトを初めて実行すると、開始直後にスクリプトが<emphasis role="
+"\"strong\">失敗</emphasis>し、「<emphasis role=\"strong\">ERROR: Early loop "
+"device test failed, please retry the container run. (エラー: "
+"ループデバイスの早期テストが失敗しました。もう一度コンテナの実行を試してくだ"
+"さい。)</emphasis>」というエラーが発生すると予想されます。これは、基になるホ"
+"ストシステム上に作成されるループデバイスがすぐにはコンテナイメージ内に表示さ"
+"れないことを示す症状です。単にコマンドを再実行すれば、問題なく続行されるはず"
+"です。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1378
+#, fuzzy
 msgid ""
 "After a few minutes the images can be found in the local output directory:"
-msgstr ""
+msgstr "数分後、ローカルのoutputディレクトリ内にイメージを確認できます。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1379
+#, fuzzy
 msgid "Building images with other profiles"
-msgstr ""
+msgstr "他のプロファイルを使用したイメージの構築"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1380
+#, fuzzy
 msgid ""
 "In order to build different image profiles, the \"<emphasis role=\"strong\">-"
 "p</emphasis>\" command option in the Kiwi container image helper script is "
 "used. For example, to build the \"<emphasis role=\"strong\">Default-"
 "SelfInstall</emphasis>\" ISO image:"
 msgstr ""
+"異なるイメージプロファイルを構築するには、Kiwiコンテナイメージのヘルパースク"
+"リプトで「<emphasis role=\"strong\""
+">-p</emphasis>」コマンドオプションを使用します。たとえば、「<emphasis role="
+"\"strong\">Default-"
+"SelfInstall</emphasis>」のISOイメージを構築するには、次のコマンドを使用します"
+"。"
 
 #. type: Content of: <book><part><chapter><section><note><para>
 #: l10n/source/edge.xml:1381
+#, fuzzy
 msgid ""
 "To avoid data loss, Kiwi will refuse to run if there are images in the "
 "<literal>output</literal> directory. It is required to remove the contents "
 "of the output directory before proceeding with <literal>rm -f output/*</"
 "literal>."
 msgstr ""
+"データの消失を防ぐため、Kiwiは、<literal>output</literal>ディレクトリにイメー"
+"ジが存在する場合、実行を拒否します。<literal>rm -f output/"
+"*</literal>を使用して続行する前に、outputディレクトリの内容を削除する必要があ"
+"ります。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1382
@@ -11914,11 +12054,13 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1383
+#, fuzzy
 msgid "Building images with large sector sizes"
-msgstr ""
+msgstr "大きいセクタサイズを使用したイメージの構築"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1384
+#, fuzzy
 msgid ""
 "Some hardware requires an image with a large sector size, i.e. <emphasis "
 "role=\"strong\">4096 bytes</emphasis> rather than the standard 512 bytes. "
@@ -11928,6 +12070,14 @@ msgid ""
 "role=\"strong\">Default-SelfInstall</emphasis>\" image with a large sector "
 "size:"
 msgstr ""
+"ハードウェアによっては、大きいセクタサイズ、"
+"つまり標準の512バイトではなく<emphasis role=\"strong\""
+">4096バイト</emphasis>のイメージが必要になることがあります。"
+"コンテナ化されたKiwi Builderでは、「<emphasis role=\"strong\""
+">-b</emphasis>」パラメータを指定することで、大きいブロックサイズのイメージを"
+"生成できます。たとえば、大きいセクタサイズを使用して「<emphasis role="
+"\"strong\">Default-"
+"SelfInstall</emphasis>」イメージを構築するには、次のコマンドを使用します。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1385
@@ -11938,34 +12088,49 @@ msgstr "イメージ定義ファイルの作成"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1386
+#, fuzzy
 msgid ""
 "For advanced use-cases a custom Kiwi image definition file (<literal>SL-"
 "Micro.kiwi</literal>) can be used along with any necessary post-build "
 "scripts. This requires overriding the default definitions pre-packaged by "
 "the SUSE Edge team."
 msgstr ""
+"高度なユースケースでは、カスタムのKiwiイメージ定義ファイル(<literal>SL-"
+"Micro.kiwi</literal>)を、必要な構築後スクリプトとともに使用できます。このため"
+"には、SUSE "
+"Edgeチームによって事前にパッケージ化されているデフォルトの定義を上書きする必"
+"要があります。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1387
+#, fuzzy
 msgid ""
 "Create a new directory and map it into the container image where the helper "
 "script is looking (<literal>/micro-sdk/defs</literal>):"
 msgstr ""
+"新しいディレクトリを作成し、ヘルパースクリプトが参照するコンテナイメージにマ"
+"ップします(<literal>/micro-sdk/defs</literal>)。"
 
 #. type: Content of: <book><part><chapter><section><warning><para>
 #: l10n/source/edge.xml:1388
+#, fuzzy
 msgid ""
 "This is only required for advanced use-cases and may cause supportability "
 "issues. Please contact your SUSE representative for further advice and "
 "guidance."
 msgstr ""
+"これは、高度なユースケースにおいて、サポート性に問題が生じる可能性がある場合"
+"にのみ必要です。詳細なアドバイスとガイダンスについては、SUSEの担当者にお問い"
+"合わせください。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1389
+#, fuzzy
 msgid ""
 "To get the default Kiwi image definition files included in the container, "
 "the following commands can be used:"
-msgstr ""
+msgstr "コンテナに含まれるデフォルトのKiwiイメージ定義ファイルを取得するには、次のコ"
+"マンドを使用できます。"
 
 #. type: Content of: <book><part><title>
 #: l10n/source/edge.xml:1390
@@ -26496,8 +26661,9 @@ msgstr ""
 #: l10n/source/edge.xml:3149 l10n/source/edge.xml:3169
 #: l10n/source/edge.xml:3189 l10n/source/edge.xml:3204
 #: l10n/source/edge.xml:3230
+#, fuzzy
 msgid "Logs"
-msgstr ""
+msgstr "ログ"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3150
@@ -27947,13 +28113,15 @@ msgstr "SUSE Linux Micro 6.0、Kubernetes 1.30、およびRancher Prime 2.9に�
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3317
+#, fuzzy
 msgid "Updated to SUSE Security (Neuvector) 5.4.2"
-msgstr ""
+msgstr "SUSE Security (Neuvector) 5.4.2に更新"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3318
+#, fuzzy
 msgid "Updated to SUSE Storage (Longhorn) 1.7.3"
-msgstr ""
+msgstr "SUSE Storage (Longhorn) 1.7.3に更新"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:3319 l10n/source/edge.xml:3435
@@ -27963,49 +28131,77 @@ msgstr "バグおよびセキュリティの修正"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3320
+#, fuzzy
 msgid ""
 "Addresses <link xl:href=\"https://nvd.nist.gov/vuln/detail/"
 "CVE-2025-1974\">CVE-2025-1974</link> with patches for ingress-nginx in RKE2. "
 "More information available <link xl:href=\"https://kubernetes.io/"
 "blog/2025/03/24/ingress-nginx-cve-2025-1974/\">here</link>."
 msgstr ""
+"RKE2のingress-nginxに対するパッチによって<link xl:href="
+"\"https://nvd.nist.gov/vuln/detail/CVE-2025-1974\""
+">CVE-2025-1974</link>に対処しました。詳細については、<link xl:href="
+"\"https://kubernetes.io/blog/2025/03/24/ingress-nginx-cve-2025-1974/\""
+">こちら</link>を参照してください。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3321
+#, fuzzy
 msgid "SUSE Storage (Longhorn) 1.7.3 contains several bugfixes, including"
-msgstr ""
+msgstr "SUSE Storage (Longhorn) "
+"1.7.3には以下をはじめとする複数のバグ修正が含まれます。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3322
+#, fuzzy
 msgid ""
 "Fix volume FailedMount issue which can cause volume attachment to fail <link "
 "xl:href=\"https://github.com/longhorn/longhorn/issues/9939\">Upstream "
 "Longhorn Issue</link>"
 msgstr ""
+"ボリュームのFailedMountの問題の修正。この問題のために、ボリュームのアタッチが"
+"失敗する可能性があります(<link xl:href="
+"\"https://github.com/longhorn/longhorn/issues/9939\""
+">アップストリームのLonghornの問題</link>)。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3323
+#, fuzzy
 msgid ""
 "Fix engine stuck in stopped state issue which can prevent volume attachment "
 "<link xl:href=\"https://github.com/longhorn/longhorn/issues/9938\">Upstream "
 "Longhorn Issue</link>"
 msgstr ""
+"エンジンが停止状態でスタックする問題の修正。この問題のために、ボリュームのア"
+"タッチが妨げられる可能性があります(<link xl:href="
+"\"https://github.com/longhorn/longhorn/issues/9938\""
+">アップストリームのLonghornの問題</link>)。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3324
+#, fuzzy
 msgid ""
 "The Kiwi Builder has been added, version 10.2.12 to match recent security "
 "changes in Kiwi, shifting from <link xl:href=\"https://github.com/OSInside/"
 "kiwi/commit/d4d39e481aaff8be28337a9c76c3913a8a482628\">md5 to sha256 "
 "checksum methods</link> for image verification."
 msgstr ""
+"Kiwi "
+"Builderバージョン10.2.12が追加されました。これは、最近Kiwiで実施されたセキュ"
+"リティの変更に対応するためです。この変更により、イメージの検証が<link "
+"xl:href=\"https://github.com/OSInside/kiwi/commit/"
+"d4d39e481aaff8be28337a9c76c3913a8a482628\""
+">md5チェックサムによる方法からsha256チェックサムによる方法</link>に移行されま"
+"す。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3325
+#, fuzzy
 msgid ""
 "The Edge Image Builder image has been rebuilt to address the Kiwi changes "
 "mentioned above."
-msgstr ""
+msgstr "上記のKiwiの変更に対応するために、Edge Image "
+"Builderのイメージが再構築されました。"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:3326
@@ -28016,6 +28212,7 @@ msgstr "既知の問題"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3327
+#, fuzzy
 msgid ""
 "When updating to RKE2 1.30.11, which resolves <link xl:href=\"https://nvd."
 "nist.gov/vuln/detail/CVE-2025-1974\">CVE-2025-1974</link>, SUSE Linux Micro "
@@ -28030,6 +28227,20 @@ msgid ""
 "clusters, please follow <xref linkend=\"guides-kiwi-builder-images\"/> to "
 "build fresh images containing the latest kernel."
 msgstr ""
+"RKE2 1.30.11に更新して<link xl:href="
+"\"https://nvd.nist.gov/vuln/detail/CVE-2025-1974\""
+">CVE-2025-1974</link>を解決する場合、必要なSELinuxカーネルパッチのため、SUSE "
+"Linux Micro "
+"6.0を更新し、カーネル<literal>&gt;=6.4.0-26-default</literal>または<literal>&"
+"gt;=6.4.0-30-rt</literal> (リアルタイムカーネル)を含める<emphasis role="
+"\"strong\">必要があります</emphasis>。これが適用されていない場合、ingress-"
+"nginxポッドは<literal>CrashLoopBackOff</literal>状態のままになります。カーネ"
+"ル更新を適用するには、ホスト自体で<literal>transactional-"
+"update</literal>を実行するか(すべてのパッケージを更新する場合)、<literal"
+">transactional-update pkg update kernel-default</literal> (またはkernel-"
+"rt)を実行してカーネルのみを更新し、その後ホストを再起動します。新しいクラスタ"
+"をデプロイする場合は、<xref linkend=\"guides-kiwi-builder-images\""
+"/>に従って、最新のカーネルが含まれる新規イメージを構築してください。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3328 l10n/source/edge.xml:3444
