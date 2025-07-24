@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2025-07-09 12:09+0200\n"
-"PO-Revision-Date: 2024-12-20 03:50+0000\n"
-"Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
+"PO-Revision-Date: 2025-07-24 13:08+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/edge/"
-"release-31/zh_CN/>\n"
+"edge-release-3-1/zh_CN/>\n"
 "Language: zh-CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.1\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. type: Content of: outside any tag (error?)
 #: l10n/source/edge.xml:1
@@ -1339,12 +1339,16 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:145 l10n/source/edge.xml:305
+#, fuzzy
 msgid ""
 "The <literal>time</literal> section is optional but it is highly recommended "
 "to configure it to avoid potential issues with certificates and clock skew. "
 "The values provided in this example are for illustrative purposes only. "
 "Please adjust them to fit your specific requirements."
 msgstr ""
+"虽然 <literal>time</literal> "
+"部分是可选的，但强烈建议配置该部分，以免出现证书和时钟偏差方面的潜在问题。本"
+"示例中提供的值仅作说明之用，请根据您的具体要求相应调整。"
 
 #. type: Content of: <book><part><chapter><section><section><section><title>
 #: l10n/source/edge.xml:146 l10n/source/edge.xml:2829 l10n/source/edge.xml:2868
@@ -2588,12 +2592,16 @@ msgstr "未编码的口令是 <literal>eib</literal>。"
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:307
+#, fuzzy
 msgid ""
 "The <literal>sccRegistrationCode</literal> is needed to download and install "
 "the necessary RPMs from the official sources (alternatively, the "
 "<literal>elemental-register</literal> and <literal>elemental-system-agent</"
 "literal> RPMs can be manually side-loaded instead)"
 msgstr ""
+"要从官方来源下载和安装必要的 RPM，则需要配置 "
+"<literal>sccRegistrationCode</literal>（或者，也可以手动侧载 <literal"
+">elemental-register</literal> 和 <literal>elemental-system-agent</literal>）"
 
 #. type: Content of: <book><part><chapter><section><note><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:309
@@ -3137,55 +3145,70 @@ msgstr "配置操作系统用户"
 
 #. type: Content of: <book><part><chapter><section><section><para>
 #: l10n/source/edge.xml:370
+#, fuzzy
 msgid ""
 "The <literal>time</literal> section is optional but it is highly recommended "
 "to be configured to avoid potential issues with certificates and clock skew. "
 "EIB will configure chronyd and <literal>/etc/localtime</literal> depending "
 "on the parameters here."
 msgstr ""
+"虽然 <literal>time</literal> "
+"部分是可选的，但强烈建议配置该部分，以免出现证书和时钟偏差方面的潜在问题。"
+"EIB 将根据此处的参数配置 chronyd 和 <literal>/etc/localtime</literal>。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:371
+#, fuzzy
 msgid ""
 "The <literal>timezone</literal> specifies the timezone in the format of "
 "\"Region/Locality\" (e.g. \"Europe/London\"). The full list may be found by "
 "running <literal>timedatectl list-timezones</literal> on a Linux system."
 msgstr ""
+"<literal>timezone</literal> 以“区域/地点”格式指定时区（例如“欧洲/伦敦”）。在 "
+"Linux 系统上运行 <literal>timedatectl list-timezones</literal> "
+"命令即可查看完整列表。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:372
+#, fuzzy
 msgid "ntp - Defines attributes related to configuring NTP (using chronyd):"
-msgstr ""
+msgstr "ntp：定义与（使用 chronyd）配置 NTP 相关的属性："
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:373
+#, fuzzy
 msgid ""
 "forceWait - Requests that chronyd attempts to synchronize timesources before "
 "starting other services, with a 180s timeout."
-msgstr ""
+msgstr "forceWait：要求 chronyd 在启动其他服务前尝试同步时间源，超时时间为 180 秒。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:374
+#, fuzzy
 msgid ""
 "pools - Specifies a list of pools that chronyd will use as data sources "
 "(using <literal>iburst</literal> to improve the time taken for initial "
 "synchronization)."
-msgstr ""
+msgstr "pools：指定 chronyd 将用作数据源的池列表（使用 <literal>iburst</literal> "
+"缩短初始同步耗时）。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:375
+#, fuzzy
 msgid ""
 "servers - Specifies a list of servers that chronyd will use as data sources "
 "(using <literal>iburst</literal> to improve the time taken for initial "
 "synchronization)."
-msgstr ""
+msgstr "servers：指定 chronyd 将用作数据源的服务器列表（使用 <literal>iburst</"
+"literal> 缩短初始同步耗时）。"
 
 #. type: Content of: <book><part><chapter><section><section><note><para>
 #: l10n/source/edge.xml:376
+#, fuzzy
 msgid ""
 "The values provided in this example are for illustrative purposes only. "
 "Please adjust them to fit your specific requirements."
-msgstr ""
+msgstr "本示例中提供的值仅作说明之用，请根据您的具体要求相应调整。"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:377
@@ -10857,11 +10880,13 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><title>
 #: l10n/source/edge.xml:1349
+#, fuzzy
 msgid "Building Updated SUSE Linux Micro Images with Kiwi"
-msgstr ""
+msgstr "使用 Kiwi 构建更新的 SUSE Linux Micro 映像"
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1350
+#, fuzzy
 msgid ""
 "This section explains how to generate updated SUSE Linux Micro images to be "
 "used with Edge Image Builder, with Cluster API (CAPI) + Metal<superscript>3</"
@@ -10872,9 +10897,15 @@ msgid ""
 "reinstall the operating system with a new image rather than upgrading the "
 "hosts in place."
 msgstr ""
+"本节将说明如何生成更新的 SUSE Linux Micro 映像，这些映像可用于 Edge Image "
+"Builder、Cluster API (CAPI) + "
+"Metal<superscript>3</superscript>，或直接将磁盘映像写入块设备。此流程适用于需"
+"要在初始系统引导映像中包含最新补丁（以减少安装后的补丁传输量）的场景，或使用 "
+"CAPI 的场景，在该场景中，更适合使用新映像重新安装操作系统，而非就地升级主机。"
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1351
+#, fuzzy
 msgid ""
 "This process makes use of <link xl:href=\"https://osinside.github.io/kiwi/"
 "\">Kiwi</link> to run the image build. SUSE Edge ships with a containerized "
@@ -10883,13 +10914,21 @@ msgid ""
 "required. The profile defines the type of output image that is required, "
 "with the common ones listed below:"
 msgstr ""
+"该流程借助 <link xl:href=\"https://osinside.github.io/kiwi/\">Kiwi</link> "
+"来执行映像构建。SUSE Edge "
+"随附容器化版本，其中内置了实用辅助工具，可简化整体流程，"
+"并支持指定所需的目标<emphasis role=\"strong\""
+">配置文件</emphasis>。配置文件定义了所需输出映像的类型，常见类型如下："
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1352
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base</emphasis>\" - A SUSE Linux Micro disk "
 "image with a reduced package set (it includes podman)."
 msgstr ""
+"“<emphasis role=\"strong\">Base</emphasis>”- SUSE Linux Micro "
+"磁盘映像，包含精简的软件包集合（含 podman）。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1353
@@ -10906,25 +10945,34 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1354
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base-RT</emphasis>\" - Same as \"Base\" above "
 "but using a real-time (rt) kernel instead."
 msgstr ""
+"“<emphasis role=\"strong\">Base-RT</emphasis>”- 与上述“Base”相同，但使用实时 "
+"(rt) 内核。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1355
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Base-RT-SelfInstall</emphasis>\" - A SelfInstall "
 "image based on the \"Base-RT\" above"
 msgstr ""
+"“<emphasis role=\"strong\">Base-RT-SelfInstall</emphasis>”- 基于上述“Base-"
+"RT”的自我安装映像。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1356
+#, fuzzy
 msgid ""
 "\"<emphasis role=\"strong\">Default</emphasis>\" - A SUSE Linux Micro disk "
 "image based on the \"Base\" above but with a few more tools, including the "
 "virtualization stack, Cockpit and salt-minion."
 msgstr ""
+"“<emphasis role=\"strong\">Default</emphasis>”- 基于上述“Base”的 SUSE Linux "
+"Micro 磁盘映像，额外包含部分工具，如虚拟化堆栈、Cockpit 和 salt-minion。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1357
@@ -10955,6 +11003,7 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><para>
 #: l10n/source/edge.xml:1359
+#, fuzzy
 msgid ""
 "This process works for both AMD64/Intel 64 and AArch64 architectures, "
 "although not all image profiles are available for both architectures, e.g. "
@@ -10962,56 +11011,74 @@ msgid ""
 "time kernel (i.e. \"Base-RT\" or \"Base-RT-SelfInstall\") is not currently "
 "available for AArch64."
 msgstr ""
+"此流程适用于 AMD64/Intel 64 和 AArch64 "
+"两种体系结构，但并非所有映像配置文件都同时支持这两种体系结构。例如，在使用 "
+"SUSE Linux Micro 6.0 的 SUSE Edge 3.1 中，含实时内核的配置文件（即“Base-RT”或"
+"“Base-RT-SelfInstall”）目前暂不支持 AArch64 体系结构。"
 
 #. type: Content of: <book><part><chapter><note><para>
 #: l10n/source/edge.xml:1360
+#, fuzzy
 msgid ""
 "It is required to use a build host with the same architecture of the images "
 "being built. In other words, to build an AArch64 image, it is required to "
 "use an AArch64 build host, and vice-versa for AMD64/Intel 64 - cross-builds "
 "are not supported at this time."
 msgstr ""
+"构建主机的体系结构必须与待构建映像的体系结构一致。也就是说，要构建 AArch64 "
+"体系结构的映像，必须使用 AArch64 体系结构的构建主机；AMD64/Intel 64 "
+"体系结构同样如此 - 目前不支持跨体系结构构建。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1362
+#, fuzzy
 msgid "Kiwi image builder requires the following:"
-msgstr ""
+msgstr "Kiwi 映像构建器的要求如下："
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1363
+#, fuzzy
 msgid ""
 "A SUSE Linux Micro 6.0 host (\"build system\") with the same architecture of "
 "the image being built."
-msgstr ""
+msgstr "需使用 SUSE Linux Micro 6.0 "
+"主机（即“构建系统”），且其体系结构与待构建映像的体系结构一致。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1364
+#, fuzzy
 msgid ""
 "The build system needs to be already registered via <literal>SUSEConnect</"
 "literal> (the registration is used to pull the latest packages from the SUSE "
 "repositories)"
-msgstr ""
+msgstr "构建系统需已通过 <literal>SUSEConnect</literal> 完成注册（注册是为了从 SUSE "
+"储存库提取最新软件包）。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1365
+#, fuzzy
 msgid ""
 "An internet connection that can be used to pull the required packages. If "
 "connected via proxy, the build host needs to be pre-configured."
-msgstr ""
+msgstr "能够连接互联网以提取所需软件包；如果通过代理连接，需预先配置构建主机的代理设"
+"置。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1366
+#, fuzzy
 msgid ""
 "SELinux needs to be disabled on the build host (as SELinux labelling takes "
 "place in the container and it can conflict with the host policy)"
-msgstr ""
+msgstr "构建主机上需禁用 SELinux（因为 SELinux "
+"标签会在容器内生成，可能与主机策略冲突）。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1367
+#, fuzzy
 msgid ""
 "At least 10GB free disk space to accommodate the container image, the build "
 "root, and the resulting output image(s)"
-msgstr ""
+msgstr "至少需要 10GB 可用磁盘空间，以容纳容器映像、构建根目录及最终生成的输出映像。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1368
@@ -11022,23 +11089,28 @@ msgstr "入门"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1369
+#, fuzzy
 msgid ""
 "Due to certain limitations, it is currently required to disable SELinux. "
 "Connect to the SUSE Linux Micro 6.0 image build host and ensure SELinux is "
 "disabled:"
 msgstr ""
+"由于存在某些限制，目前需要禁用 SELinux。请连接到 SUSE Linux Micro 6.0 "
+"映像构建主机，并确保 SELinux 已禁用："
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1370
+#, fuzzy
 msgid ""
 "Create an output directory to be shared with the Kiwi build container to "
 "save the resulting images:"
-msgstr ""
+msgstr "创建一个将与 Kiwi 构建容器共享的输出目录，用于保存生成的映像："
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1371
+#, fuzzy
 msgid "Pull the latest Kiwi builder image from the SUSE Registry:"
-msgstr ""
+msgstr "从 SUSE 注册表提取最新的 Kiwi 构建器映像："
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1372
@@ -11049,33 +11121,41 @@ msgstr "构建映像"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1373
+#, fuzzy
 msgid ""
 "This is the default behavior of the Kiwi image container if no arguments are "
 "provided during the container image run. The following command runs "
 "<literal>podman</literal> with two directories mapped to the container:"
 msgstr ""
+"如果运行容器映像时未提供任何参数，这就是 Kiwi 映像容器的默认行为。"
+"以下命令运行 <literal>podman</literal> 时会将两个目录映射到容器："
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1374
+#, fuzzy
 msgid ""
 "The <literal>/etc/zypp/repos.d</literal> SUSE Linux Micro package repository "
 "directory from the underlying host."
-msgstr ""
+msgstr "底层主机的 <literal>/etc/zypp/repos.d</literal> SUSE Linux Micro "
+"软件包储存库目录。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1375
+#, fuzzy
 msgid "The output <literal>~/output</literal> directory created above."
-msgstr ""
+msgstr "上文创建的输出目录 <literal>~/output</literal>。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1376
+#, fuzzy
 msgid ""
 "The Kiwi image container requires to run the <literal>build-image</literal> "
 "helper script as:"
-msgstr ""
+msgstr "Kiwi 映像容器需要按如下方式运行 <literal>build-image</literal> 辅助脚本："
 
 #. type: Content of: <book><part><chapter><section><note><para>
 #: l10n/source/edge.xml:1377
+#, fuzzy
 msgid ""
 "It’s expected that if you’re running this script for the first time that it "
 "will <emphasis role=\"strong\">fail</emphasis> shortly after starting with "
@@ -11085,35 +11165,50 @@ msgid ""
 "inside of the container image. Simply re-run the command again and it should "
 "proceed without issue."
 msgstr ""
+"如果您是首次运行此脚本，脚本预计会在启动后不久<emphasis role=\"strong\""
+">失败</emphasis>，并显示“<emphasis role=\"strong\">ERROR: Early loop device "
+"test failed, please retry the container "
+"run.</emphasis>”，这是由于底层主机系统上创建的循环设备无法立即在容器映像内可"
+"见所致。只需重新运行该命令，即可顺利执行。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1378
+#, fuzzy
 msgid ""
 "After a few minutes the images can be found in the local output directory:"
-msgstr ""
+msgstr "几分钟后，即可在本地输出目录中找到映像："
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1379
+#, fuzzy
 msgid "Building images with other profiles"
-msgstr ""
+msgstr "使用其他配置文件构建映像"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1380
+#, fuzzy
 msgid ""
 "In order to build different image profiles, the \"<emphasis role=\"strong\">-"
 "p</emphasis>\" command option in the Kiwi container image helper script is "
 "used. For example, to build the \"<emphasis role=\"strong\">Default-"
 "SelfInstall</emphasis>\" ISO image:"
 msgstr ""
+"要构建不同的映像配置文件，需要使用 Kiwi 容器映像辅助脚本中的“<emphasis role="
+"\"strong\">-p</emphasis>”命令选项。例如，要构建“<emphasis role=\"strong\""
+">Default-SelfInstall</emphasis>”ISO 映像，请运行："
 
 #. type: Content of: <book><part><chapter><section><note><para>
 #: l10n/source/edge.xml:1381
+#, fuzzy
 msgid ""
 "To avoid data loss, Kiwi will refuse to run if there are images in the "
 "<literal>output</literal> directory. It is required to remove the contents "
 "of the output directory before proceeding with <literal>rm -f output/*</"
 "literal>."
 msgstr ""
+"如果 <literal>output</literal> 目录中存在映像，Kiwi "
+"将拒绝运行，以免数据丢失。继续操作前，需要使用 <literal>rm -f output/*</"
+"literal> 命令去除输出目录中的内容。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1382
@@ -11130,11 +11225,13 @@ msgstr ""
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1383
+#, fuzzy
 msgid "Building images with large sector sizes"
-msgstr ""
+msgstr "构建大扇区大小的映像"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1384
+#, fuzzy
 msgid ""
 "Some hardware requires an image with a large sector size, i.e. <emphasis "
 "role=\"strong\">4096 bytes</emphasis> rather than the standard 512 bytes. "
@@ -11144,6 +11241,11 @@ msgid ""
 "role=\"strong\">Default-SelfInstall</emphasis>\" image with a large sector "
 "size:"
 msgstr ""
+"有些硬件要求映像采用大扇区大小（即 <emphasis role=\"strong\">4096 "
+"字节</emphasis>，而非标准的 512 字节）。容器化 Kiwi 构建器支持通过指定“"
+"<emphasis role=\"strong\""
+">-b</emphasis>”参数生成大块大小的映像。例如，要构建大扇区大小的“<emphasis "
+"role=\"strong\">Default-SelfInstall</emphasis>”映像，请运行："
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1385
@@ -11154,34 +11256,43 @@ msgstr "创建映像定义文件"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1386
+#, fuzzy
 msgid ""
 "For advanced use-cases a custom Kiwi image definition file (<literal>SL-"
 "Micro.kiwi</literal>) can be used along with any necessary post-build "
 "scripts. This requires overriding the default definitions pre-packaged by "
 "the SUSE Edge team."
 msgstr ""
+"对于高级用例，可以使用自定义 Kiwi 映像定义文件 (<literal>SL-"
+"Micro.kiwi</literal>) 以及任何必要的构建后脚本。这需要覆盖 SUSE Edge "
+"团队预先打包的默认定义。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1387
+#, fuzzy
 msgid ""
 "Create a new directory and map it into the container image where the helper "
 "script is looking (<literal>/micro-sdk/defs</literal>):"
-msgstr ""
+msgstr "创建一个新目录，并将其映射到容器映像中辅助脚本将查找定义文件的目录 (<literal"
+">/micro-sdk/defs</literal>)："
 
 #. type: Content of: <book><part><chapter><section><warning><para>
 #: l10n/source/edge.xml:1388
+#, fuzzy
 msgid ""
 "This is only required for advanced use-cases and may cause supportability "
 "issues. Please contact your SUSE representative for further advice and "
 "guidance."
-msgstr ""
+msgstr "此操作仅适用于高级用例，可能会导致可支持性问题。请联系您的 SUSE "
+"代表以获取进一步建议和指导。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1389
+#, fuzzy
 msgid ""
 "To get the default Kiwi image definition files included in the container, "
 "the following commands can be used:"
-msgstr ""
+msgstr "要获取容器中包含的默认 Kiwi 映像定义文件，可使用以下命令："
 
 #. type: Content of: <book><part><title>
 #: l10n/source/edge.xml:1390
@@ -24864,8 +24975,9 @@ msgstr ""
 #: l10n/source/edge.xml:3149 l10n/source/edge.xml:3169
 #: l10n/source/edge.xml:3189 l10n/source/edge.xml:3204
 #: l10n/source/edge.xml:3230
+#, fuzzy
 msgid "Logs"
-msgstr ""
+msgstr "日志"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3150
@@ -26281,13 +26393,15 @@ msgstr "更新到 SUSE Linux Micro 6.0、Kubernetes 1.30 和 Rancher Prime 2.9"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3317
+#, fuzzy
 msgid "Updated to SUSE Security (Neuvector) 5.4.2"
-msgstr ""
+msgstr "更新到 SUSE Security (Neuvector) 5.4.2"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3318
+#, fuzzy
 msgid "Updated to SUSE Storage (Longhorn) 1.7.3"
-msgstr ""
+msgstr "更新到 SUSE Storage (Longhorn) 1.7.3"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:3319 l10n/source/edge.xml:3435
@@ -26297,49 +26411,70 @@ msgstr "Bug 和安全修复"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3320
+#, fuzzy
 msgid ""
 "Addresses <link xl:href=\"https://nvd.nist.gov/vuln/detail/"
 "CVE-2025-1974\">CVE-2025-1974</link> with patches for ingress-nginx in RKE2. "
 "More information available <link xl:href=\"https://kubernetes.io/"
 "blog/2025/03/24/ingress-nginx-cve-2025-1974/\">here</link>."
 msgstr ""
+"通过为 RKE2 中的 ingress-nginx 应用补丁以修复 <link xl:href="
+"\"https://nvd.nist.gov/vuln/detail/CVE-2025-1974\">CVE-2025-1974</link> "
+"漏洞。更多信息请参见<link xl:href="
+"\"https://kubernetes.io/blog/2025/03/24/ingress-nginx-cve-2025-1974/\""
+">此处</link>。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3321
+#, fuzzy
 msgid "SUSE Storage (Longhorn) 1.7.3 contains several bugfixes, including"
-msgstr ""
+msgstr "SUSE Storage (Longhorn) 1.7.3 包含多项 bug 修复，包括："
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3322
+#, fuzzy
 msgid ""
 "Fix volume FailedMount issue which can cause volume attachment to fail <link "
 "xl:href=\"https://github.com/longhorn/longhorn/issues/9939\">Upstream "
 "Longhorn Issue</link>"
 msgstr ""
+"修复卷 FailedMount 问题（该问题可能导致卷挂接失败），请参见<link xl:href="
+"\"https://github.com/longhorn/longhorn/issues/9939\">上游 Longhorn "
+"问题</link>"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3323
+#, fuzzy
 msgid ""
 "Fix engine stuck in stopped state issue which can prevent volume attachment "
 "<link xl:href=\"https://github.com/longhorn/longhorn/issues/9938\">Upstream "
 "Longhorn Issue</link>"
 msgstr ""
+"修复引擎陷入停止状态的问题（该问题可能阻止卷挂接），请参见<link xl:href="
+"\"https://github.com/longhorn/longhorn/issues/9938\">上游 Longhorn "
+"问题</link>"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3324
+#, fuzzy
 msgid ""
 "The Kiwi Builder has been added, version 10.2.12 to match recent security "
 "changes in Kiwi, shifting from <link xl:href=\"https://github.com/OSInside/"
 "kiwi/commit/d4d39e481aaff8be28337a9c76c3913a8a482628\">md5 to sha256 "
 "checksum methods</link> for image verification."
 msgstr ""
+"已添加 Kiwi 构建器 10.2.12 版本，以适配 Kiwi 近期的安全变更 - "
+"映像验证的<link xl:href=\"https://github.com/OSInside/kiwi/commit/"
+"d4d39e481aaff8be28337a9c76c3913a8a482628\">校验和方法从 md5 变为 "
+"sha256</link>。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3325
+#, fuzzy
 msgid ""
 "The Edge Image Builder image has been rebuilt to address the Kiwi changes "
 "mentioned above."
-msgstr ""
+msgstr "已重新构建 Edge Image Builder 映像，以适配上述 Kiwi 变更。"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:3326
@@ -26350,6 +26485,7 @@ msgstr "已知问题"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3327
+#, fuzzy
 msgid ""
 "When updating to RKE2 1.30.11, which resolves <link xl:href=\"https://nvd."
 "nist.gov/vuln/detail/CVE-2025-1974\">CVE-2025-1974</link>, SUSE Linux Micro "
@@ -26364,6 +26500,18 @@ msgid ""
 "clusters, please follow <xref linkend=\"guides-kiwi-builder-images\"/> to "
 "build fresh images containing the latest kernel."
 msgstr ""
+"在更新至 RKE2 1.30.11（此版本修复了 <link xl:href="
+"\"https://nvd.nist.gov/vuln/detail/CVE-2025-1974\">CVE-2025-1974</link> "
+"漏洞）时，由于需要 SELinux 内核补丁，SUSE Linux Micro 6.0 <emphasis role="
+"\"strong\">必须</emphasis>更新至所含内核版本 <literal>&gt;=6.4.0-26-default</"
+"literal> 或 "
+"<literal>&gt;=6.4.0-30-rt</literal>（实时内核）的版本。如果未进行该更新"
+"，ingress-nginx Pod 将持续处于 <literal>CrashLoopBackOff</literal> "
+"状态。要进行内核更新，可在主机上运行 <literal>transactional-"
+"update</literal>（以更新所有软件包），或运行 <literal>transactional-update "
+"pkg update kernel-default</literal>（或 kernel-"
+"rt）仅更新内核，随后重引导主机。如果您是在部署新群集，请按照<xref linkend"
+"=\"guides-kiwi-builder-images\"/>中的说明构建包含最新内核的全新映像。"
 
 #. type: Content of: <book><part><chapter><section><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3328 l10n/source/edge.xml:3444
