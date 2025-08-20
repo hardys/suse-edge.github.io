@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2025-07-09 12:09+0200\n"
-"PO-Revision-Date: 2025-08-13 07:59+0000\n"
+"PO-Revision-Date: 2025-08-22 19:16+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/edge/"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.13\n"
 
 #. type: Content of: outside any tag (error?)
 #: l10n/source/edge.xml:1
@@ -197,11 +197,12 @@ msgid ""
 "explained below, with a simplified high-level architecture diagram, noting "
 "that this isn’t an exhaustive list:"
 msgstr ""
-"SUSE Edgeは、既存のSUSEとRancherのコンポーネントと、エッジコンピューティング"
-"に必要な制約や複雑さに対応できるようにEdgeチームが構築した追加機能とコンポー"
-"ネントで構成されています。管理クラスタとダウンストリームクラスタの両方で使用"
-"されるコンポーネントは、簡略化された高レベルなアーキテクチャ図とともに以下に"
-"説明しますが、これは網羅的なリストではないことに注意してください。"
+"SUSE "
+"Edgeは、既存のSUSEとRancherのコンポーネントと、エッジコンピューティングに必要"
+"な制約や複雑さに対応できるようにEdgeチームが構築した追加機能とコンポーネント"
+"で構成されています。管理クラスタとダウンストリームクラスタの両方で使用される"
+"コンポーネントは、高レベルなアーキテクチャ図とともに以下に説明しますが、これ"
+"は網羅的なリストではないことに注意してください。"
 
 #. type: Content of: <book><part><chapter><title>
 #: l10n/source/edge.xml:16 l10n/source/edge.xml:1734
@@ -1532,7 +1533,7 @@ msgid ""
 msgstr ""
 "EIBイメージをダウンストリームクラスタにデプロイする際は、<literal>Metal3Machi"
 "neTemplate</literal>オブジェクトにイメージのSHA256ハッシュ値を含める必要があ"
-"ります。  これは次のように生成できます："
+"ります。これは次のように生成できます:"
 
 #. type: Content of: <book><part><chapter><section><section><title>
 #: l10n/source/edge.xml:154
@@ -3522,11 +3523,10 @@ msgstr ""
 "試みます。EIBは、依存関係を含むすべてのパッケージを出力イメージ内に存在するリ"
 "ポジトリにダウンロードし、そのパッケージを初回ブートプロセス中にインストール"
 "するようにシステムに指示します。イメージの構築中にこのプロセスを実行すること"
-"で、初回ブート時にパッケージが目的のプラットフォーム(エッジのノードなど)が正"
-"常にインストールされることが保証されます。これは、操作時に追加パッケージを"
-"ネットワーク経由でプルするのではなく、イメージに事前に書き込んでおきたい環境"
-"でも便利です。たとえば、エアギャップ環境や、ネットワークが制限された環境で"
-"す。"
+"で、初回ブート時にパッケージが目的のプラットフォーム(エッジのノードなど)に正"
+"常にインストールされることが保証されます。これは、操作時に追加パッケージをネ"
+"ットワーク経由でプルするのではなく、イメージに事前に書き込んでおきたい環境で"
+"も便利です。たとえば、エアギャップ環境や、ネットワークが制限された環境です。"
 
 #. type: Content of: <book><part><chapter><section><section><para>
 #: l10n/source/edge.xml:385
@@ -3759,17 +3759,19 @@ msgid ""
 "to all nodes - see the networking guide (<xref linkend=\"components-nmc\"/>) "
 "for further details."
 msgstr ""
-"上記の例は、テストを仮想マシン上で実行すると仮定して、デフォルトの"
-"<literal>192.168.122.0/242</literal>サブネット用に設定されています。ご使用の"
-"環境に合わせて、MACアドレスも忘れずに変更してください。同じイメージを使用して"
-"複数のノードをプロビジョニングできるため、 EIBで(<literal>nmc</literal>を介し"
-"て)設定されたネットワーキングは、各ノードをMACアドレスで一意に識別できるかど"
-"うかに依存しており、その後、ブート中に<literal>nmc</literal>は正しいネット"
-"ワーキング設定を各マシンに適用します。つまり、インストール先のシステムのMACア"
-"ドレスを把握する必要があります。また、デフォルトの動作ではDHCPに依存します"
-"が、<literal>configure-network.sh</literal>フックを利用して、すべてのノードに"
-"共通の設定を適用することもできます。詳細については、ネットワーキングのガイド "
-"(<xref linkend=\"components-nmc\"/>)を参照してください。"
+"上記の例は、テストを仮想マシン上で実行すると仮定して、デフォルトの<literal>"
+"192.168.122.0/"
+"24</literal>サブネット用に設定されています。ご使用の環境に合わせて、MACアドレ"
+"スも忘れずに変更してください。同じイメージを使用して複数のノードをプロビジョ"
+"ニングできるため、 "
+"EIBで(<literal>nmc</literal>を介して)設定されたネットワーキングは、各ノードを"
+"MACアドレスで一意に識別できるかどうかに依存しており、その後、ブート中に<liter"
+"al>nmc</literal>は正しいネットワーキング設定を各マシンに適用します。つまり、"
+"インストール先のシステムのMACアドレスを把握する必要があります。また、デフォル"
+"トの動作ではDHCPに依存しますが、<literal>configure-"
+"network.sh</literal>フックを利用して、すべてのノードに共通の設定を適用するこ"
+"ともできます。詳細については、ネットワーキングのガイド(<xref linkend"
+"=\"components-nmc\"/>)を参照してください。"
 
 #. type: Content of: <book><part><chapter><section><section><para>
 #: l10n/source/edge.xml:401
@@ -8479,9 +8481,9 @@ msgid ""
 "emphasis> page and click <literal>Create from YAML</literal> in the upper "
 "right of the screen."
 msgstr ""
-"［<emphasis role=\"strong\">KubeVirt </emphasis>］ &gt; ［Virtual Machines "
-"(仮想マシン)］ページで、画面の右上にある［ <literal>Create from YAML (YAMLか"
-"ら作成)</literal>］をクリックします。"
+"<emphasis role=\"strong\">［KubeVirt］ </emphasis> &gt; ［Virtual Machines "
+"(仮想マシン)］ページで、画面の右上にある［ <literal>Create from YAML "
+"(YAMLから作成)</literal>］をクリックします。"
 
 #. type: Content of: <book><part><chapter><section><section><section><orderedlist><listitem><para>
 #: l10n/source/edge.xml:965
@@ -9342,7 +9344,7 @@ msgstr "オペレーティングシステム(SL Micro)"
 #. type: Content of: <book><part><chapter><blockquote><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1063
 msgid "Kubernetes (K3s &amp; RKE2)"
-msgstr "Kubernetes (K3s &amp; RKE2)"
+msgstr "Kubernetes (K3sとRKE2)"
 
 #. type: Content of: <book><part><chapter><blockquote><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1064
@@ -11423,9 +11425,9 @@ msgid ""
 "down that list to the smallest working configuration. From there, you can "
 "add back any images you may need for your deployments."
 msgstr ""
-"コンテナ イメージは合計で600個以上あり、結果として得られるCRBイメージは約30GB"
-"になります。Rancher のインストールでは、そのリストを最小の動作設定にまで削減"
-"します。そこから、デプロイメントに必要なイメージを追加し直すことができます。"
+"コンテナイメージは合計で600個以上あり、結果として得られるCRBイメージは約30GB"
+"になります。Rancherのインストールでは、そのリストを最小の動作設定にまで削減し"
+"ます。そこから、デプロイメントに必要なイメージを追加し直すことができます。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:1312
@@ -11871,7 +11873,7 @@ msgid ""
 msgstr ""
 "コンテナイメージの実行時に引数が指定されていない場合、これがKiwiイメージコン"
 "テナのデフォルトの動作です。以下のコマンドは、次の2つのディレクトリをコンテナ"
-"にマップした状態で<literal>podman</literal> を実行します。"
+"にマップした状態で<literal>podman</literal>を実行します。"
 
 #. type: Content of: <book><part><chapter><section><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:1374
@@ -11963,8 +11965,8 @@ msgid ""
 "(\"<emphasis role=\"strong\">kernel-rt</emphasis>\"):"
 msgstr ""
 "または、リアルタイムカーネル(「<emphasis role=\"strong\">kernel-"
-"rt</emphasis>」)を使用してセルフインストールISOイメージを構築するには、次のコ"
-"マンドを使用します。"
+"rt</emphasis>」)を使用してSelfInstall "
+"ISOイメージを構築するには、次のコマンドを使用します。"
 
 #. type: Content of: <book><part><chapter><section><title>
 #: l10n/source/edge.xml:1383
@@ -28209,8 +28211,8 @@ msgid ""
 "<link xl:href=\"https://github.com/longhorn/longhorn/issues/9938\">Upstream "
 "Longhorn Issue</link>"
 msgstr ""
-"エンジンが停止状態でスタックする問題の修正。この問題のために、ボリュームのア"
-"タッチが妨げられる可能性があります(<link xl:href="
+"エンジンが停止状態のままになる問題の修正。この問題のために、ボリュームのアタ"
+"ッチが妨げられる可能性があります(<link xl:href="
 "\"https://github.com/longhorn/longhorn/issues/9938\""
 ">アップストリームのLonghornの問題</link>)。"
 
