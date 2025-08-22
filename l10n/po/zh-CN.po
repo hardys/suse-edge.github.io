@@ -8,8 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2025-07-09 12:09+0200\n"
 "PO-Revision-Date: 2025-08-22 19:16+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/edge/"
 "edge-release-3-1/zh_CN/>\n"
 "Language: zh-CN\n"
@@ -3384,10 +3383,11 @@ msgid ""
 "manifest. The additional configuration we need to append to the existing "
 "image definition is as follows:"
 msgstr ""
-"在下一个示例中，我们将采用现有的映像定义并指定 Kubernetes 配置（在本示例中，"
-"未列出系统及其角色，因此我们默认假设使用单节点群集），这会指示 EIB 置备单节"
-"点 RKE2 Kubernetes 群集。为了展示用户提供的工作负载（通过清单）和分层组件（通"
-"过 Helm）部署的自动化，我们将通过 SUSE Edge Helm chart 安装 KubeVirt，并通过 "
+"在下一个示例中，我们将采用现有的映像定义并指定 Kubernetes "
+"配置（在本示例中，未列出系统及其角色，因此我们默认假设使用单节点群集），"
+"这会指示 EIB 置备单节点 RKE2 Kubernetes "
+"群集。为了展示用户提供的工作负载（通过清单）和分层组件（通过 "
+"Helm）部署的自动化，我们将通过 SUSE Edge Helm chart 安装 KubeVirt，并通过 "
 "Kubernetes 清单安装 NGINX。需要追加到现有映像定义的附加配置如下："
 
 #. type: Content of: <book><part><chapter><section><section><para>
@@ -3572,8 +3572,8 @@ msgid ""
 "contains information. From there, it will direct you to the component that "
 "failed for debugging."
 msgstr ""
-"如果构建失败，首先会在 <literal>eib-build.log</literal> 中记录相关信息。该日"
-"志会指出哪个组件构建失败，方便您进行调试。"
+"如果构建失败，首先会在 <literal>eib-build.log</literal> "
+"中记录相关信息。该日志会指出哪个组件构建失败，方便您进行调试。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:411
@@ -21281,8 +21281,7 @@ msgstr "resourcePrefix：<literal>Rancher.io</literal>"
 msgid ""
 "There are a lot of combinations to discover and create the resource group to "
 "allocate some <literal>VFs</literal> to the pods."
-msgstr ""
-"可以发现许多组合，并创建资源组来为 Pod 分配一些 <literal>VF</literal>。"
+msgstr "可以发现许多组合，并创建资源组来为 Pod 分配一些 <literal>VF</literal>。"
 
 #. type: Content of: <book><part><chapter><section><note><para>
 #: l10n/source/edge.xml:2645
@@ -23117,11 +23116,11 @@ msgid ""
 "command: <literal>kubectl get bmh -o yaml</literal>."
 msgstr ""
 "在验证 <literal>BMC</literal> 身份凭证之前，<literal>BaremetalHost</literal> "
-"对象将一直处于<literal>正在注册</literal>状态。验证身份凭证后，"
-"<literal>BaremetalHost</literal> 对象的状态将更改为<literal>正在检查</"
-"literal>，此步骤可能需要一段时间（最长 20 分钟），具体取决于所用的硬件。在检"
-"查阶段，将检索硬件信息并更新 Kubernetes 对象。使用以下命令检查信息："
-"<literal>kubectl get bmh -o yaml</literal>。"
+"对象将一直处于<literal>正在注册</literal>状态。验证身份凭证后，<literal>Barem"
+"etalHost</literal> "
+"对象的状态将更改为<literal>正在检查</literal>，此步骤可能需要一段时间（最长 "
+"20 分钟），具体取决于所用的硬件。在检查阶段，将检索硬件信息并更新 Kubernetes "
+"对象。使用以下命令检查信息：<literal>kubectl get bmh -o yaml</literal>。"
 
 #. type: Content of: <book><part><chapter><section><para>
 #: l10n/source/edge.xml:2920 l10n/source/edge.xml:2955
@@ -24042,7 +24041,7 @@ msgstr "说明"
 #. type: Content of: <book><part><chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: l10n/source/edge.xml:3033
 msgid "domain,nohz,managed_irq,1-30,33-62"
-msgstr "domain,nohz,&#x200B;managed_irq,1-30,33-62"
+msgstr "domain,nohz,managed_irq,1-30,33-62"
 
 #. type: Content of: <book><part><chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: l10n/source/edge.xml:3034
@@ -24995,6 +24994,8 @@ msgid ""
 "machine has enough CPU/memory to run the EIB container on non-Linux "
 "operating systems."
 msgstr ""
+"<emphasis role=\"strong\">Podman 计算机容量</emphasis>：在非 Linux "
+"操作系统上，需要验证 Podman 计算机是否有充足的 CPU/内存来运行 EIB 容器。"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3170
@@ -25902,6 +25903,9 @@ msgid ""
 "administration/troubleshooting/tshoot-intro.html\">SUSE Multi-Linux Manager "
 "Troubleshooting</link>"
 msgstr ""
+"<link xl:href=\"https://documentation.suse.com/suma/5.0/en/suse-manager/"
+"administration/troubleshooting/tshoot-intro.html\">SUSE Multi-Linux Manager "
+"查错</link>"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3267
@@ -25927,6 +25931,9 @@ msgid ""
 "<link xl:href=\"https://longhorn.io/docs/1.7.3/troubleshoot/troubleshooting/"
 "\">Longhorn Troubleshooting</link>"
 msgstr ""
+"<link xl:href="
+"\"https://longhorn.io/docs/1.7.3/troubleshoot/troubleshooting/\">Longhorn "
+"查错</link>"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3270
@@ -25934,6 +25941,9 @@ msgid ""
 "<link xl:href=\"https://open-docs.neuvector.com/troubleshooting/"
 "troubleshooting/\">Neuvector Troubleshooting</link>"
 msgstr ""
+"<link xl:href="
+"\"https://open-docs.neuvector.com/troubleshooting/troubleshooting/\""
+">Neuvector 查错</link>"
 
 #. type: Content of: <book><part><chapter><itemizedlist><listitem><para>
 #: l10n/source/edge.xml:3271
