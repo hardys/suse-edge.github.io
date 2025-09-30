@@ -18,8 +18,12 @@
     "@type": ["TechArticle"],
     "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
     
-    "inLanguage": "en",
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Products &amp; Solutions"
+    },
     
+
     "headline": "K3s",
   
     "description": "K3s",
@@ -32,8 +36,11 @@
       }
     ],
       
-    "dateModified": "2024-03-25T00:00+02:00",
+
+    "about": [
       
+    ],
+  
     "sameAs": [
           "https://www.facebook.com/SUSEWorldwide/about",
           "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
@@ -71,4 +78,4 @@ hljs.configure({
 It is meant to be installed on a SLE Micro operating system.</p><p>The use of K3s as the SUSE Edge stack Kubernetes distribution is only recommended when etcd as a backend is not a possibility. If you can use etcd as a backend, use <a class="link" href="./rke2.adoc" target="_blank">RKE2</a>.</p></section><section class="sect1" id="id-best-practices-4" data-id-title="Best practices"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">13.2 </span><span class="title-name">Best practices</span></span> <a title="Permalink" class="permalink" href="id-k3s.html#id-best-practices-4">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><section class="sect2" id="id-installation" data-id-title="Installation"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">13.2.1 </span><span class="title-name">Installation</span></span> <a title="Permalink" class="permalink" href="id-k3s.html#id-installation">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>The recommended way of installing K3s as part of the SUSE Edge stack is by using Edge Image Builder (EIB), see <a class="link" href="./edge-image-builder.adoc" target="_blank">its documentation</a> for more details on how to configure it to deploy K3s.</p><p>It automatically supports HA setup, as well as Elemental setup.</p></section><section class="sect2" id="id-fleet-for-gitops-workflow" data-id-title="Fleet for GitOps workflow"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">13.2.2 </span><span class="title-name">Fleet for GitOps workflow</span></span> <a title="Permalink" class="permalink" href="id-k3s.html#id-fleet-for-gitops-workflow">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>The SUSE Edge stack uses fleet as its preferred GitOps tool.
 For more information around its installation and use, refer to <a class="link" href="./fleet.adoc" target="_blank">the fleet section</a> in this documentation.</p></section><section class="sect2" id="id-storage-management" data-id-title="Storage management"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">13.2.3 </span><span class="title-name">Storage management</span></span> <a title="Permalink" class="permalink" href="id-k3s.html#id-storage-management">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>K3s comes with local-path storage pre-configured, this is suitable for single-node clusters.
 For clusters spanning over multiple nodes, it is recommended to use <a class="link" href="./longhorn.adoc" target="_blank">Longhorn</a></p></section><section class="sect2" id="id-load-balancing-and-ha" data-id-title="Load Balancing and HA"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">13.2.4 </span><span class="title-name">Load Balancing and HA</span></span> <a title="Permalink" class="permalink" href="id-k3s.html#id-load-balancing-and-ha">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>If you installed K3s using EIB this part is already covered by the EIB documentation in the HA section.</p><p>Otherwise, you need to install and configure MetalLB as per our <a class="link" href="../guides/metallb-k3s.adoc" target="_blank">MetalLB documentation</a>.</p></section></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="id-sle-micro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 12 </span>SLE Micro</span></a> </div><div><a class="pagination-link next" href="id-rke2.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 14 </span>RKE2</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="id-k3s.html#id-how-does-suse-edge-use-k3s"><span class="title-number">13.1 </span><span class="title-name">How does SUSE Edge use K3s</span></a></span></li><li><span class="section"><a href="id-k3s.html#id-best-practices-4"><span class="title-number">13.2 </span><span class="title-name">Best practices</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
-                 2024</span></div></div></footer></body></html>
+                 2025</span></div></div></footer></body></html>

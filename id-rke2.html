@@ -18,8 +18,12 @@
     "@type": ["TechArticle"],
     "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
     
-    "inLanguage": "en",
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Products &amp; Solutions"
+    },
     
+
     "headline": "RKE2",
   
     "description": "RKE2",
@@ -32,8 +36,11 @@
       }
     ],
       
-    "dateModified": "2024-03-25T00:00+02:00",
+
+    "about": [
       
+    ],
+  
     "sameAs": [
           "https://www.facebook.com/SUSEWorldwide/about",
           "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
@@ -77,4 +84,4 @@ spec:
     cni: calico
     cniMultusEnable: true
 ...</pre></div><p>For more information about the Metal^3 use cases, see the <a class="link" href="metal3.adoc" target="_blank">Metal3</a> documentation.</p></section><section class="sect2" id="id-high-availability" data-id-title="High Availability"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">14.3.2 </span><span class="title-name">High Availability</span></span> <a title="Permalink" class="permalink" href="id-rke2.html#id-high-availability">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>For HA deployments, EIB automatically deploys and configures <a class="link" href="metallb.adoc" target="_blank">MetalLB</a> and the <a class="link" href="endpointcopieroperator.adoc" target="_blank">Endpoint Copier Operator</a> to expose the RKE2 API endpoint externally.</p></section><section class="sect2" id="id-networking" data-id-title="Networking"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">14.3.3 </span><span class="title-name">Networking</span></span> <a title="Permalink" class="permalink" href="id-rke2.html#id-networking">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>The supported CNI for the Edge Stack is <a class="link" href="https://docs.cilium.io/en/stable/" target="_blank">Cilium</a> with optionally adding the meta-plugin <a class="link" href="https://github.com/k8snetworkplumbingwg/multus-cni" target="_blank">Multus</a>, but RKE2 supports <a class="link" href="https://docs.rke2.io/install/network_options" target="_blank">a few others</a> as well.</p></section><section class="sect2" id="id-storage" data-id-title="Storage"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">14.3.4 </span><span class="title-name">Storage</span></span> <a title="Permalink" class="permalink" href="id-rke2.html#id-storage">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a></div></div></div></div></div><p>RKE2 doesn’t provide any kind of persistent storage class nor operators. For clusters spanning over multiple nodes, it is recommended to use <a class="link" href="./longhorn.adoc" target="_blank">Longhorn</a>.</p></section></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="id-k3s.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 13 </span>K3s</span></a> </div><div><a class="pagination-link next" href="id-edge-image-builder.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 15 </span>Edge Image Builder</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="section"><a href="id-rke2.html#id-rke2-vs-k3s"><span class="title-number">14.1 </span><span class="title-name">RKE2 vs K3s</span></a></span></li><li><span class="section"><a href="id-rke2.html#id-how-does-suse-edge-use-rke2"><span class="title-number">14.2 </span><span class="title-name">How does SUSE Edge use RKE2?</span></a></span></li><li><span class="section"><a href="id-rke2.html#id-best-practices-5"><span class="title-number">14.3 </span><span class="title-name">Best Practices</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
-                 2024</span></div></div></footer></body></html>
+                 2025</span></div></div></footer></body></html>
