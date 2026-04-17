@@ -14,8 +14,6 @@
 {%- set release_manifest_metallb_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "metallb") | map(attribute="version") | list | first  %}
 {%- set release_manifest_eco_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "endpoint-copier-operator") | map(attribute="version") | list | first  %}
 {%- set release_manifest_cdi_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "cdi") | map(attribute="version") | list | first  %}
-{%- set release_manifest_akri_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "akri") | map(attribute="version") | list | first  %}
-{%- set release_manifest_akri_dashboard_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "akri") | map(attribute="addonCharts") | first | map(attribute="version") | list | first  %}
 {%- set release_manifest_metal3_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "metal3") | map(attribute="version") | list | first  %}
 {%- set release_manifest_kubevirt_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "kubevirt") | map(attribute="version") | list | first  %}
 {%- set release_manifest_kubevirt_dashboard_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "kubevirt") | map(attribute="addonCharts") | first | map(attribute="version") | list | first  %}
@@ -27,7 +25,7 @@
 {%- set release_manifest_turtles_providers_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "rancher-turtles-providers") | map(attribute="version") | list | first %}
 {%- set release_manifest_cert_manager_version = spec.components.workloads.helm | selectattr("releaseName", "equalto", "cert-manager") | map(attribute="version") | list | first %}
 // ============================================================================
-:revdate: %%REVDATE%%
+:revdate: {{ revision_date }}
 :page-revdate: {revdate}
 // Automatic Version Substitutions
 // 

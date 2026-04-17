@@ -100,22 +100,26 @@ def find_file_in_layer(layer_path, target_file):
     return None
 
 
-def fetch_release_manifest(image_ref, target_file="release_manifest.yaml"):
+def fetch_release_manifest(image_ref):
     """Fetch release manifest from container image using ORAS."""
     print(f"Fetching release manifest from {image_ref}")
 
+    manifest_data = {}
     client = oras.client.OrasClient()
 
     with tempfile.TemporaryDirectory() as tmpdir:
         layers = client.pull(target=image_ref, outdir=tmpdir)
 
         for i, layer_path in enumerate(layers):
-            content = find_file_in_layer(layer_path, target_file)
+            content = find_file_in_layer(layer_path, "release_manifest.yaml")
             if content:
-                print(f"✓ Found {target_file} in layer {i+1}")
-                return content
-
-    raise FileNotFoundError(f"File {target_file} not found in image")
+                print(f"✓ Found release_manifest.yaml in layer {i+1}")
+                manifest_data["release_manifest"] = yaml.safe_load(content)
+            content = find_file_in_layer(layer_path, "tooling_manifest.yaml")
+            if content:
+                print(f"✓ Found tooling_manifest.yaml in layer {i+1}")
+                manifest_data["tooling_manifest"] = yaml.safe_load(content)
+    return manifest_data
 
 
 def get_image_version_from_rancher(rancher_version, image_name):
@@ -163,10 +167,6 @@ def render_template(template_path, manifest_data, output_path):
     # Render template with manifest data
     output = template.render(manifest_data)
 
-    # Replace %%REVDATE%% with current date
-    revision_date = date.today().strftime('%Y-%m-%d')
-    output = output.replace('%%REVDATE%%', revision_date)
-
     # Write output
     output_file = Path(output_path)
     output_file.write_text(output)
@@ -179,8 +179,8 @@ def main():
     )
     parser.add_argument(
         '--image',
-        default='registry.suse.com/edge/3.5/release-manifest',
-        help='Container image reference without tag (default: registry.suse.com/edge/3.5/release-manifest)'
+        default='registry.opensuse.org/isv/suse/edge/factory/test_manifest_images/release-manifest',
+        help='Container image reference without tag (default: registry.opensuse.org/isv/suse/edge/factory/test_manifest_images/release-manifest)'
     )
     parser.add_argument(
         '--tag',
@@ -221,11 +221,12 @@ def main():
     # Build full image reference
     image_ref = f"{repository}:{tag}"
 
-    # Fetch release manifest from container image
-    manifest_yaml = fetch_release_manifest(image_ref)
+    # Fetch release manifest data from container image
+    manifest_data_all = fetch_release_manifest(image_ref)
 
     # Parse YAML
-    manifest_data = yaml.safe_load(manifest_yaml)
+    manifest_data = manifest_data_all["release_manifest"]
+    tooling_data = manifest_data_all["tooling_manifest"]
 
     # Add additional version data
     # Get versions from other images in the same registry path
@@ -279,6 +280,9 @@ def main():
         manifest_data['version_suc_chart'] = suc_chart_version
     else:
         print("⚠ Warning: Rancher version not found in manifest, skipping SUC and Fleet versions")
+
+    # Define revision_date
+    manifest_data['revision_date'] = date.today().strftime('%Y-%m-%d')
 
     # Render template
     render_template(args.template, manifest_data, args.output)
