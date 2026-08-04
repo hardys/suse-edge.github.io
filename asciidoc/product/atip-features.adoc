@@ -737,7 +737,7 @@ Using the Bond CNI with SR-IOV is fairly straightforward. For more details on ho
 
 [NOTE]
 ====
-Bond CNI with SR-IOV is only applicable to SRIOV Virtual Functions (VF) using the kernel driver. Userspace driver VFs - such as those used in DPDK workloads - cannnot be bonded with the Bond CNI.
+Bond CNI with SR-IOV is only applicable to SRIOV Virtual Functions (VF) using the kernel driver. Userspace driver VFs - such as those used in DPDK workloads - cannot be bonded with the Bond CNI.
 ====
 
 [#sriov]
