@@ -183,7 +183,7 @@ The following options are important to be customized with your current hardware 
 
 | nohz
 | on
-| When enabled, kernel's periodic timer interrupt (the 'tick') will stop on any CPU core that is idle. This primarily benefits the housekeeping CPUs (`0,31,32,63`). This conserves power and reduces unnecessary wake-ups on those general-purpose cores.
+| When enabled, the kernel's periodic timer interrupt (the 'tick') stops on any CPU core that becomes idle. This primarily benefits the housekeeping CPUs (`0,31,32,63`), conserving power and reducing unnecessary wake-ups on those general-purpose cores.
 
 | nohz_full
 | 1-30,33-62
